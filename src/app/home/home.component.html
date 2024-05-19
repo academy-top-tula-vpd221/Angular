@@ -1,0 +1,12 @@
+<section>
+  <form>
+    <input type="text" placeholder="Filter of city" (volumechange)="filterHouses(filter.value)" #filter>
+    <!--button class="primary" type="button" (click) ="filterHouses(filter.value)">Search</button-->
+  </form>
+</section>
+<section>
+    <app-location
+        *ngFor = "let house of houses"
+          [location]="house">
+    </app-location>
+</section>
